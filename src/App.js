@@ -43,7 +43,11 @@ const App = () => {
                     padding: "5vw 10vh",
                 }}
             ></Grid>
-            <Grid item xs={6} style={{ padding: "5vw 10vh" }}>
+            <Grid
+                item
+                xs={6}
+                style={{ padding: "5vw 10vh", backgroundColor: "#ffebee" }}
+            >
                 <Box
                     height="100%"
                     display="flex"
@@ -143,6 +147,13 @@ const App = () => {
                                 .toString()
                                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </Button>
+                        <Typography
+                            variant="subtitle2"
+                            color="text.secondary"
+                            fontWeight="400"
+                        >
+                            Weekdays: $100/hr Weekends: $150/hr
+                        </Typography>
                     </Paper>
                 </Box>
             </Grid>
