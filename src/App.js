@@ -11,7 +11,7 @@ import TextField from "@mui/material/TextField";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DateTimePicker from "@mui/lab/DateTimePicker";
-import mountain from "./images/mountain.jpeg";
+import mountain from "./images/mountain.jpg";
 
 const App = () => {
     const [date, setDate] = useState(null);
@@ -32,7 +32,7 @@ const App = () => {
         setCost(totalCost);
     }, [date, duration]);
     return (
-        <Grid container height="100vh">
+        <Grid container height="100vh" backgroundColor="#ffebee">
             <Grid
                 item
                 xs={6}
@@ -76,6 +76,7 @@ const App = () => {
                             flexDirection: "column",
                             justifyContent: "center",
                             borderRadius: "28px",
+                            maxWidth: "600px",
                         }}
                         elevation={8}
                     >
@@ -137,7 +138,10 @@ const App = () => {
                             sx={{ height: "50px", margin: "10px 0" }}
                             color="secondary"
                         >
-                            Book now for only ${cost}
+                            Book now for only $
+                            {cost
+                                .toString()
+                                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </Button>
                     </Paper>
                 </Box>
