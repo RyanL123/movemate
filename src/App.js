@@ -21,7 +21,7 @@ const App = () => {
         let currentDate = new Date(date); // convert to JS Date object
         for (let hours = duration; hours > 0; hours--) {
             const day = currentDate.getDay(); // 0-6 for sunday-saturday
-            if (day == 0 || day == 6) {
+            if (day === 0 || day === 6) {
                 totalCost += 150; // weekend
             } else {
                 totalCost += 100; // weekday
@@ -29,7 +29,7 @@ const App = () => {
             currentDate.setHours(currentDate.getHours() + 1); // add 1 hour each time
         }
         setCost(totalCost);
-    });
+    }, [date, duration]);
     return (
         <Box
             display="flex"
