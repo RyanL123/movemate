@@ -48,7 +48,7 @@ const App = () => {
                     height="100%"
                     display="flex"
                     flexDirection="column"
-                    justifyContent="space-evenly"
+                    justifyContent="center"
                 >
                     <Typography
                         variant="h2"
@@ -56,7 +56,17 @@ const App = () => {
                         fontWeight="700"
                         lineHeight="4rem"
                     >
-                        Experience nature <br></br>like you've never before
+                        Experience nature
+                    </Typography>
+                    <Typography
+                        variant="h2"
+                        textAlign="left"
+                        fontWeight="700"
+                        lineHeight="4rem"
+                        marginBottom="5vh"
+                        color="secondary"
+                    >
+                        like you've never before
                     </Typography>
                     <Paper
                         sx={{
@@ -90,7 +100,11 @@ const App = () => {
                             <DateTimePicker
                                 // sx={{ height: "100px" }}
                                 renderInput={(props) => (
-                                    <TextField color="secondary" {...props} />
+                                    <TextField
+                                        color="secondary"
+                                        sx={{ margin: "10px 0" }}
+                                        {...props}
+                                    />
                                 )}
                                 label="Date"
                                 value={date}
@@ -104,6 +118,7 @@ const App = () => {
                             label="Hours"
                             value={duration}
                             color="secondary"
+                            sx={{ margin: "10px 0" }}
                             onChange={(newDuration) => {
                                 // max 9999 hours ~ 416 days
                                 // using Math.min forces 0 in the input even when input is empty, not good
@@ -119,7 +134,7 @@ const App = () => {
                         <Button
                             variant="outlined"
                             endIcon={<ArrowForward />}
-                            sx={{ height: "50px" }}
+                            sx={{ height: "50px", margin: "10px 0" }}
                             color="secondary"
                         >
                             Book now for only ${cost}
