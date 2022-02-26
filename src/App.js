@@ -150,7 +150,7 @@ const App = () => {
                         <Typography
                             variant="subtitle2"
                             color="text.secondary"
-                            fontWeight="400"
+                            fontWeight="700"
                         >
                             Weekdays: $100/hr Weekends: $150/hr
                         </Typography>
